@@ -28,13 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            BookList = new ListBox();
             SuspendLayout();
+            // 
+            // BookList
+            // 
+            BookList.FormattingEnabled = true;
+            BookList.ItemHeight = 15;
+            BookList.Location = new Point(12, 12);
+            BookList.Name = "BookList";
+            BookList.Size = new Size(219, 199);
+            BookList.TabIndex = 0;
             // 
             // Reader
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BookList);
             Name = "Reader";
             Text = "Reader";
             Load += Reader_Load;
@@ -42,5 +53,7 @@
         }
 
         #endregion
+
+        private ListBox BookList;
     }
 }
